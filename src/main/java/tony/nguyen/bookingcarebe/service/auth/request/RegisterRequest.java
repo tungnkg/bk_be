@@ -30,7 +30,4 @@ public class RegisterRequest {
     )
     @NotNull(message = "Số điện thoại không được để trống")
     private String phoneNumber;
-    private String address;
-
-
 }

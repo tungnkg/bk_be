@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
+import org.springframework.data.elasticsearch.annotations.Document;
 
 import java.time.Instant;
 
@@ -12,6 +13,7 @@ import java.time.Instant;
 @Setter
 @Entity
 @Table(name = "clinics")
+@Document(indexName = "clinics")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -27,8 +29,8 @@ public class ClinicEntity {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "image_path")
-    private String imagePath;
+    @Column(name = "logo")
+    private String logo;
 
     @Column(name = "province_id")
     private Integer provinceId;
@@ -39,8 +41,8 @@ public class ClinicEntity {
     @Column(name = "ward_id")
     private Integer wardId;
 
-    @Column(name = "address")
-    private Integer address;
+    @Column(name = "street")
+    private String street;
 
     @Column(name = "created_date", insertable = false, updatable = false)
     private Instant createdDate;

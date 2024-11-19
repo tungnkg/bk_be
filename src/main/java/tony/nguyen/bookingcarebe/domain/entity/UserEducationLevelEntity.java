@@ -1,23 +1,23 @@
 package tony.nguyen.bookingcarebe.domain.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
-import org.springframework.data.elasticsearch.annotations.Document;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "user_roles")
-public class UserRoleEntity {
+@Table(name = "user_education_levels")
+public class UserEducationLevelEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
 
     @Column(name = "user_id")
-    private Integer userId;
+    private Integer user;
 
-    @Column(name = "role_id")
-    private Integer roleId;
+    @Column(name = "education_level_id")
+    private Integer educationLevel;
 
 }

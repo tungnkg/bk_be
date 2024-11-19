@@ -8,6 +8,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.elasticsearch.annotations.Document;
 
 @Getter
 @Setter
@@ -15,7 +16,7 @@ import lombok.Setter;
 @Table(name = "wards")
 public class WardEntity {
     @Id
-    @Column(name = "wards_id", insertable = false, updatable = false, nullable = false)
+    @Column(name = "id", insertable = false, updatable = false, nullable = false)
     private Integer id;
 
     @Column(name = "district_id", insertable = false, updatable = false, nullable = false)
